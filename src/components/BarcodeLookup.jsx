@@ -179,9 +179,9 @@ function BarcodeTicket({ product }) {
 }
 
 export default function BarcodeLookup({ barcodeList = [], isLoading, onRefresh, onNavigateAdmin }) {
-  const [searchTerm, setSearchTerm] = useState("00021971"); // Mẫu mặc định ban đầu theo đúng ảnh
-  const [hasSearched, setHasSearched] = useState(true);
-  const [lastQuery, setLastQuery] = useState("00021971");
+  const [searchTerm, setSearchTerm] = useState(""); // Để trống lúc mới vào theo yêu cầu
+  const [hasSearched, setHasSearched] = useState(false);
+  const [lastQuery, setLastQuery] = useState("");
   const [selectedResultIndex, setSelectedResultIndex] = useState(0);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const inputRef = useRef(null);
